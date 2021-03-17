@@ -31,7 +31,7 @@ class HomeViewControllerTests: XCTestCase {
         _ = sut.view
         
         //When
-        sut.didTap(story: MockProvider.createBaseModel() as! Story)
+        sut.didTap(story: MockProvider.createStory())
         
         //Then
         XCTAssertTrue(mockDelegate.didTapCalled)

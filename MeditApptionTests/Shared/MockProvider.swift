@@ -28,4 +28,13 @@ internal struct MockProvider {
                               content: "content",
                               image: Image.init(small: "small", large: "large"))
     }
+    
+
+    internal static func createStory() -> Story {
+        return Story.init(title: "title",
+                              subtitle: "subtitle",
+                              releaseDate: "release date",
+                              content: "content",
+                              image: Image.init(small: "small", large: "large"))
+    }
 }

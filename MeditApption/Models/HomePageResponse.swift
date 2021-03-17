@@ -82,8 +82,16 @@ internal class Story: BaseModel {
         releaseDate = try container.decode(String.self, forKey: .releaseDate)
         content = try container.decode(String.self, forKey: .content)
     }
+    
+    override init(title: String,
+         subtitle: String,
+         releaseDate: String,
+         content: String,
+         image: Image) {
+        super.init(title: title, subtitle: subtitle, releaseDate: releaseDate, content: content, image: image)
+    }
 }
-
+    
 internal class BaseModel: Codable {
     internal var title,subtitle,releaseDate,content: String?
     internal var image: Image
